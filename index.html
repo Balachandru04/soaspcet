@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Architecture | SPCET</title>
+    <style>
+      /* 🌐 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+body {
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+
+section {
+  padding: 60px 8%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+/* ✅ Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #004080;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #0074d9;
+}
+
+/* ✅ Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+
+.hero-slider {
+  display: flex;
+  overflow: hidden;
+  height: 1050px;
+  max-height: 750px;
+}
+
+.hero-slider img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.hero-stats .stat h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+}
+
+.hero-cta {
+  margin: 20px 0;
+}
+
+/* ✅ About */
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+/* ✅ Programs */
+.program-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+
+  /* Center when only one card */
+  justify-content: center;
+  padding: 20px;
+}
+
+.programs .card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  max-width: 600px;  /* ✅ Prevent stretching */
+  margin: auto;      /* ✅ Center horizontally */
+  padding: 15px;     /* ✅ Inner spacing */
+}
+
+.programs .card:hover {
+  transform: translateY(-5px);
+}
+
+.programs img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+/* ✅ Why Choose Us */
+.why-us ul {
+  max-width: 600px;
+  margin: auto;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.why-us li {
+  background: url("images/check.png") no-repeat left center;
+  background-size: 20px;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+/* ✅ Faculty */
+.faculty-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.faculty .card {
+  background: #f7f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.faculty .card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ✅ Facilities */
+.facility-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.facility {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.facility img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ✅ News */
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.news .card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.news .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ✅ Student Life */
+.student-life .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.student-life .gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ✅ Admissions */
+.admissions ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.admissions li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.admission-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* 📱 Mobile Adjustments */
+/* @media (max-width: 768px) {
+  section {
+    padding: 40px 5%;
+  }
+
+  .hero-slider {
+    height: 40vh;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .student-life .gallery img {
+    height: 150px;
+  }
+} */
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 5%;
+  }
+
+  .hero-slider {
+    height: 40vh;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* space between items */
+    text-align: center; /* center stats content */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .student-life .gallery img {
+    height: 150px;
+  }
+}
+
+
+/* Global headings */
+h1 {
+    color: #1E90FF; /* Blue */
+}
+
+h2 {
+    color: #FF4500; /* Orange Red */
+}
+
+/* Hero stats heading override */
+.hero-stats .stat h2 {
+  flex: 1 1 20%;
+  color: #ffcc00; /* Keep yellow for stats */
+}
+
+/* Hero CTA button */
+.hero-cta .btn-hero {
+    background-color: #004080;
+    color: white;
+}
+
+.hero-cta .btn-hero:hover {
+    background-color: #0074d9;
+}
+
+.admissions .btn-hero {
+    background-color: #004080;
+    color: white;
+}
+
+.admissions.btn-hero:hover {
+    background-color: #0074d9;
+}
+
+    </style>
+</head>
+<!-- Header placeholder -->
+    <div id="header"></div>
+
+    <section class="hero">
+    <div class="hero-slider">
+      <img src="assets/SOA block.jpg" alt="Campus Architecture Exhibition">
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><h2>400+</h2><p>Students</p></div>
+      <div class="stat"><h2>30+</h2><p>Faculty</p></div>
+      <div class="stat"><h2>400+</h2><p>Alumni</p></div>
+      <div class="stat"><h2>1</h2><p>Programs</p></div>
+    </div>
+    <div class="hero-cta">
+      <a href="assets/Brochure.pdf" target="_blank" class="btn btn-hero">Download Brochure</a>
+    </div>
+  </section>
+
+  <!-- ✅ Section 3: About -->
+  <section class="about">
+    <h2 style="color:#0056a3;">About the School of Architecture</h2>
+    <p>
+      Established in 2008, the School of Architecture is dedicated to cultivating creative, 
+      socially responsible, and technically skilled architects. Our programs emphasize 
+      sustainable design, urban planning, heritage conservation, and innovative building technologies.
+    </p>
+  </section>
+
+  <!-- ✅ Section 4: Programs -->
+  <section class="programs">
+    <h2 style="color: #0056a3;">Our Programs</h2>
+    <div class="program-cards">
+      <div class="card">
+        <img src="assets/b_arch.png" alt="B.Arch Program">
+        <h3>Bachelor of Architecture (B.Arch)</h3>
+        <p>5-year undergraduate program focusing on design, planning, structures, and practice.</p>
+      </div>
+      
+  </section>
+
+  <!-- ✅ Section 5: Why Choose Us -->
+
+  <section class="why-us py-5">
+  <div class="container">
+    <h2 style="color:#0056a3;">Why Choose Us?</h2>
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 text-center">
+        <img src="assets/why.webp" alt="Why Choose Us" class="img-fluid rounded shadow">
+      </div>
+      <!-- Left: Text Content -->
+      <div class="col-12 col-md-6">
+        
+        <ul>
+          <li>Studio-based learning and hands-on projects</li>
+          <li>Experienced faculty and practicing architects</li>
+          <li>International collaborations and study tours</li>
+          <li>Workshops, labs, and digital design tools</li>
+          <li>Award-winning student projects and competitions</li>
+          <li>Strong alumni network</li>
+        </ul>
+      </div>
+
+      <!-- Right: Image -->
+      
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ✅ Section 6: Faculty -->
+  <section class="faculty">
+    <h2 style="color: #0056a3;">Faculty & Research</h2>
+    <div class="faculty-cards">
+      <div class="card">
+        <img src="assets/Sunitha.R-Professor.jpeg" alt="Faculty Member">
+        <h3>MS. SUNITHA.R</h3>
+        <p>B.ARCH. ARCHITECTURE</p>
+        <p> M.PLAN. MASTER OF PLANNING</p>
+      </div>
+      <div class="card">
+        <img src="assets/Lydia.s-Professor.jpeg" alt="Faculty Member">
+        <h3>MS. LYDIA.S</h3>
+        <p>B.ARCH. ARCHITECTURE</p>
+        <p> M.ARCH. ARCHITECTURE</p>
+      </div>
+      <div class="card">
+        <img src="assets/Sumalatha.P-Professor.jpeg" alt="Faculty Member">
+        <h3>MRS. SUMALATHA.P</h3>
+        <p>B.ARCH. ARCHITECTURE</p>
+        <p>M.PLAN. MASTER OF PLANNING</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Section 7: Facilities -->
+  <section class="facilities">
+    <h2 style="color: #0056a3;">Campus & Facilities</h2>
+    <div class="facility-list">
+      <div class="facility">
+        <img src="assets/MaterialMuseum/1.jpg" alt="Design Studio">
+        <h3>Design Studios</h3>
+        <p>Spacious, collaborative studios for creative exploration.</p>l̥
+      </div>
+        <div class="facility">
+        <img src="assets/mod_work.jpg" alt="Workshop">
+        <h3>Model Workshop</h3>
+        <p>Equipped for physical model construction.</p>
+      </div>
+      <div class="facility">
+        <img src="assets/lab.png" alt="Computer Lab">
+        <h3>Computer Lab</h3>
+        <p>Software: AutoCAD, Revit, Rhino, BIM tools.</p>
+      </div>
+      <div class="facility">
+        <img src="assets/art_lib.jpeg" alt="Library">
+        <h3>Architecture Library</h3>
+        <p>Books, journals, and digital archives.</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="student-life">
+    <h2 style="color: #0056a3;">Students Work</h2>
+    <div class="gallery">
+      <img src="assets/pic_1.jpg" alt="Studio">
+      <img src="assets/pic_2.jpg" alt="Workshop">
+      <img src="assets/pic_3.jpg" alt="Study Tour">
+      <img src="assets/pic_4.jpg" alt="Cultural Fest">
+      <img src="assets/pic_5.jpg" alt="Studio">
+      <img src="assets/pic_6.jpg" alt="Studio">
+    </div>
+  </section>
+
+  <!-- ✅ Section 9: Student Life -->
+  <section class="student-life">
+    <h2 style="color: #0056a3;">Life @ School of Architecture</h2>
+    <div class="gallery">
+      <img src="assets/lyf@spcet_two.svg" alt="Studio">
+      <img src="assets/lyf@spcet_five.svg" alt="Workshop">
+      <img src="assets/lyf@spcet_six.svg" alt="Study Tour">
+      <img src="assets/lyf@spcet_four.png" alt="Cultural Fest">
+    </div>
+  </section>
+
+  <!-- ✅ Section 10: Admissions -->
+  <section class="admissions">
+    <h2 style="color: #0056a3;">Admissions Open 2025–26</h2>
+    <!-- <p>Begin your journey to becoming an architect. Apply for our programs today!</p> -->
+    <ul>
+      <p>Begin your journey to becoming an architect. Apply for our programs today!</p>
+      <li><strong>B.Arch:</strong> 5-year program (Eligibility: 10+2 with NATA/JEE Paper 2)</li>
+    </ul>
+    <div class="admission-cta">
+      <a href="assets/Brochure.pdf" target="_blank" class="btn btn-hero">Download Brochure</a>
+      <a href="contact.html" class="btn btn-hero">Contact Admissions</a>
+    </div>
+  </section>
+
+    <!-- Footer placeholder -->
+    <div id="footer"></div>
+
+    <script>
+  // Load Header
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      // ✅ Now query inside the loaded header
+      const menu = document.querySelector(".menu");
+      const menuIcon = document.querySelector(".menu-icon");
+
+      if (menu && menuIcon) {
+        menuIcon.addEventListener("click", () => {
+          menu.classList.toggle("show");
+        });
+      }
+    });
+
+  // Load Footer
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>

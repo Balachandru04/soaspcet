@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<style>
+
+/* Admission Form */
+.admission-form {
+  background: #f8f9fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.admission-form h2 {
+  color: #0056a3;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.admission-form p {
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.form-box {
+  margin-top: 20px;
+}
+
+.btn-admission {
+  display: inline-block;
+  background: #0056a3;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-admission:hover {
+  background: #003d73;
+}
+
+</style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header"></div>
+
+  <!-- Admission Form Section -->
+  <section class="admission-form">
+    <div class="container">
+      <h2>Career Enquiry</h2>
+      <p>Please fill the form below</p>
+      
+      <div class="form-box">
+        <a href="https://forms.gle/EmFTA5wp6wMseXtZ8" target="_blank" class="btn-admission">
+          Fill Career Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
+
+  <!-- Load Header & Footer -->
+  <script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                // After header is loaded, attach the menu toggle event
+                const menu = document.querySelector('.menu');
+                const menuIcon = document.querySelector('.menu-icon');
+                if(menu && menuIcon) {
+                    menuIcon.addEventListener('click', () => {
+                        menu.classList.toggle('show');
+                    });
+                }
+            });
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html> 

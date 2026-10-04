@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Desk Escalation Board</title>
+  <link rel="stylesheet" href="style.css">
+  <div id="header"></div>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Banner */
+    .helpdesk-banner {
+      background: #e91e63;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    /* Table Container */
+    .table-container {
+      overflow-x: auto; /* Horizontal scroll only when needed */
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      max-width: 1200px; /* Max width for laptop */
+      margin: 0 auto 40px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+      white-space: normal; /* Allow wrapping on small screens */
+      word-wrap: break-word;
+    }
+
+    th {
+      background: #e91e63;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    /* Nodal Officer Cell */
+    .highlight {
+      font-weight: bold;
+      color: #e91e63;
+    }
+
+    .help-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #e91e63;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .help-link:hover {
+      background: #b01244;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .helpdesk-banner {
+        font-size: 1.2rem;
+        padding: 15px;
+      }
+
+      th, td {
+        padding: 10px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="helpdesk-banner">
+    Help Desk Escalation Board
+  </div>
+
+  <!-- Table -->
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Sections & Levels</th>
+        <th>Admission</th>
+        <th>Hostel</th>
+        <th>Department</th>
+        <th>Controller of Examinations</th>
+        <th>Scholarship</th>
+      </tr>
+      <tr>
+        <td>Level 1</td>
+        <td colspan="5" class="highlight">
+          Nodal Officer - Help Desk <br>
+           MR. MURALI KRISHNA B (Director) <br>
+          📞 7358444002 <br>
+          ✉️ grievance@spcet.ac.in
+        </td>
+      </tr>
+      <tr>
+        <td>Level 2</td>
+        <td>Mrs. N. Jeevitha<br>Student Section - Clerk<br>8807280690</td>
+        <td>Mr. S. Sakthivel<br>Deputy Warden<br>8838539245</td>
+        <td>Ms. SUMALATHA.P<br>PROFESSOR<br>7358270172</td>
+        <td>Ms. YUDARSHANA S<br>Assistant Professor<br>9944998350 </td>
+        <td>Ms. V. Puvitha<br>Student Section - Clerk<br>7358110158</td>
+      </tr>
+      <tr>
+        <td>Level 3</td>
+        <td>Dr. A. Shadrach Jayasekaran<br>Superintendent<br>9865117105</td>
+        <td>Mr. G. Ganapathy Raman<br>Superintendent<br>9443606636</td>
+        <td>Mr. BHARATH G<br>Assistant Professor<br>9840418260</td>
+        <td>Ms. RAMYA JAYAKUMAR<br>Assistant Professor<br>8870936842</td>
+        <td>Mrs. PRIYANKA SHARMA Y<br>Assistant Professor<br>9003116739</td>
+      </tr>
+      <tr>
+        <td>Level 4</td>
+        <td>Mrs. R. Bhagavath Praveena<br>PA to Principal<br>8056689122</td>
+        <td>Mr. B. Jaffar Ali<br>Residential Tutor<br>9791863094</td>
+        <td>Mr. SELVARAJ K<br>Assistant Professor<br>8608758468</td>
+        <td>Mrs. TABASUM BEGUM S<br>Assistant Professor<br>7200997776</td>
+        <td>Mr. SELVA MANI M G<br>Assistant Professor<br>9884411754</td>
+      </tr>
+      <tr>
+        <td>Level 5</td>
+        <td></td>
+        <td></td>
+        <td>MR. MURALI KRISHNA B (Director)</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
+
+  <script>
+    // Load Header
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Load Footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+</body>
+</html>

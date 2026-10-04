@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  /* ✅ Main Content */
+main {
+  width: 95%;               /* Flexible for mobile */
+  max-width: 1000px;        /* Neat limit for laptop/desktop */
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+main p {
+  text-align: justify;
+  font-size: 1rem;          /* Base font for mobile */
+  line-height: 1.6;
+}
+
+/* ✅ More Link Button */
+.more-link {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.more-link a {
+  display: inline-block;
+  background: #0056a3;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;       /* Balanced for mobile/laptop */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.more-link a:hover {
+  background: #003d73;
+  transform: scale(1.05);   /* Smooth hover effect */
+}
+
+/* ✅ Responsive Tweaks */
+@media (min-width: 768px) {
+  main p {
+    font-size: 1.1rem;      /* Slightly bigger on laptop */
+  }
+
+  .more-link a {
+    padding: 12px 22px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 15px;          /* Compact on small screens */
+  }
+
+  .more-link a {
+    padding: 9px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+</style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <div id="header"></div>
+
+  <main>
+    <div class="hero-slider">
+      <img src="assets/coa_banner.png" alt="Campus Architecture Exhibition" style="width:100%; border-radius:10px;">
+    </div>
+
+    <p>
+      The Council of Architecture (COA) has been constituted by the Government of India under the provisions of the Architects Act, 1972, enacted by the Parliament of India, which came into force on 1st September, 1972. The Act provides for registration of Architects, standards of education, recognized qualifications and standards of practice to be complied with by the practicing architects. The Council of Architecture is charged with the responsibility to regulate the education and practice of profession throughout India besides maintaining the register of architects. For this purpose, the Government of India has framed Rules and Council of Architecture has framed Regulations as provided for in the Architects Act, with the approval of Government of India.
+    </p>
+
+    <p>
+      Any person desirous of carrying on the profession of 'Architect' must have registered himself with Council of Architecture. For the purpose of registration, one must possess the requisite qualification as appended to the Architects Act, after having undergone the education in accordance with the Council of Architecture (Minimum Standards of Architectural Education) Regulations, 1983. The registration with Council of Architecture entitles a person to practice the profession of architecture, provided he holds a Certificate of Registration with up-to-date renewals. The registration also entitles a person to use the title and style of Architect. The title and style of architect can also be used by a firm of architects, of which all partners are registered with COA. Limited Companies, Private/Public Companies, societies and other juridical persons are not entitled to use the title and style of architect nor are they entitled to practice the profession of architecture. If any person falsely claims to be registered or misuses title and style of architect, such acts tantamount to committing of a criminal offence, which is punishable under section 36 or 37 (2) of the Architects Act, 1972.
+    </p>
+
+    <p>
+      The practice of profession of an architect is governed by the Architects (Professional Conduct) Regulations, 1989 (as amended in 2003), which deals with professional ethics and etiquette, conditions of engagement and scale of charges, architectural competition guidelines etc. Pursuant to these Regulations, the Council of Architecture has framed guidelines governing the various aspects of practice. An architect is required to observe professional conduct as stipulated in the Regulations of 1989 and any violation thereof shall constitute a professional misconduct, which will attract disciplinary action as stipulated under section 30 of the Architects Act, 1972.
+    </p>
+
+    <p>
+      There are about 362 institutions, which impart architectural education in India leading to recognized qualifications. The standards of education being imparted in these institutions (constituent colleges/departments of universities, deemed universities, affiliated colleges/schools, IITs, NITs and autonomous institutions) is governed by Council of Architecture (Minimum Standards of Architectural Education) Regulations, 1983, which set forth the requirement of eligibility for admission, course duration, standards of staff & accommodation, course content, examination etc. These standards as provided in the said Regulations are required to be maintained by the institutions. The COA oversees the maintenance of the standards periodically by way of conducting inspections through Committees of Experts. The COA is required to keep the Central Government informed of the standards being maintained by the institutions and is empowered to make recommendations to the Government of India with regard to recognition and de-recognition of a qualification.
+    </p>
+
+    <div class="more-link">
+      <a href="https://www.coa.gov.in/" target="_blank">
+        👉 To know more about COA (Council of Architecture)
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
+
+<script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                // After header is loaded, attach the menu toggle event
+                const menu = document.querySelector('.menu');
+                const menuIcon = document.querySelector('.menu-icon');
+                if(menu && menuIcon) {
+                    menuIcon.addEventListener('click', () => {
+                        menu.classList.toggle('show');
+                    });
+                }
+            });
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>

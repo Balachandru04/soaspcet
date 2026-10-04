@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+    }
+    h1 {
+      text-align: center;
+      color: #007BFF; /* blue */
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .faculty-card {
+      display: flex;
+      align-items: center;
+      width: 600px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      background: #fff;
+    }
+    .faculty-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    .faculty-details h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+    .faculty-details p {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #555;
+    }
+    .faculty-details a {
+      color: blue;
+      text-decoration: none;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #007BFF;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header placeholder -->
+    <div id="header"></div>
+  <!-- Top Heading -->
+  <h1>Contact Us</h1>
+
+  <!-- Faculty 1 -->
+  <div class="faculty-card">
+    <img src="assets/hod.jpeg" alt="Professor Photo">
+    <div class="faculty-details">
+      <h2>MR. MURALI KRISHNA B</h2>
+      <p><b>Designation:</b> Director</p>
+      <p><b>Contact:</b> 
+        <a href="tel:7358444002">7358444002</a> /
+        <a href="tel:9444962698">9444962698</a>
+      </p>
+      <!-- <p><b>Email:</b>  -->
+        <!-- <a href="mailto:mmm@example.com">mmm@example.com</a> -->
+      </p>
+      <!-- <a href="contact.html" class="btn">Contact Admissions</a> -->
+    </div>
+  </div>
+
+  <!-- Faculty 2 -->
+  <div class="faculty-card">
+    <img src="assets/Sunitha.R-Professor.jpeg" alt="Professor Photo">
+    <div class="faculty-details">
+      <h2>MS. SUNITHA R</h2>
+      <p><b>Designation:</b> Associate Professor</p>
+      <p><b>Contact:</b> 
+        <a href="tel:9677091246">9677091246</a>
+      </p>
+      <!-- <p><b>Email:</b> 
+        <a href="mailto:anand@example.com">anand@example.com</a> -->
+      </p>
+      <!-- <a href="contact.html" class="btn">Contact Admissions</a> -->
+    </div>
+  </div>
+
+  <!-- Faculty 3 -->
+  <div class="faculty-card">
+    <img src="assets/Lydia.s-Professor.jpeg" alt="Professor Photo">
+    <div class="faculty-details">
+      <h2> MS. LYDIA S</h2>
+      <p><b>Designation:</b> Assistant Professor</p>
+      <p><b>Contact:</b> 
+        <a href="tel:9710443080">9710443080</a>
+      </p>
+      <!-- <p><b>Email:</b> 
+        <a href="mailto:priya@example.com">priya@example.com</a> -->
+      </p>
+      <!-- <a href="contact.html" class="btn">Contact Admissions</a> -->
+    </div>
+  </div>
+
+ <!-- Footer placeholder -->
+    <div id="footer"></div>
+
+    <script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                // After header is loaded, attach the menu toggle event
+                const menu = document.querySelector('.menu');
+                const menuIcon = document.querySelector('.menu-icon');
+                if(menu && menuIcon) {
+                    menuIcon.addEventListener('click', () => {
+                        menu.classList.toggle('show');
+                    });
+                }
+            });
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>

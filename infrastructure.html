@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .sports-image img {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.sports-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.sports-text p {
+  margin-bottom: 20px;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .sports-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sports-text {
+    text-align: center;
+  }
+}
+
+.healthcare-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.healthcare-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.healthcare-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.healthcare-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.healthcare-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.healthcare-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.healthcare-text ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.healthcare-text ul li {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .healthcare-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .healthcare-text {
+    text-align: center;
+  }
+} */
+
+
+
+
+.page-wrap {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: bold;
+}
+
+.infra-section {
+  margin-bottom: 60px;
+}
+
+.infra-section h2 {
+  font-size: 1.8rem;
+  color: #004080;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.infra-section h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 25px;
+}
+
+.infra-section p,
+.infra-section li {
+  color: #444;
+  line-height: 1.7;
+}
+
+.infra-section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.infra-section img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Side-by-side image + text */
+.section-flex {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section-flex img {
+  flex: 1 1 45%;
+}
+.section-flex .text {
+  flex: 1 1 50%;
+}
+
+/* Multiple images in row */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.image-row img {
+  flex: 1 1 calc(33.333% - 20px);
+}
+
+/* Banking Facility */
+.banking-facility {
+  text-align: center;
+  margin: 50px 0;
+}
+.banking-facility h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.banking-facility img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Sports Section */
+.sports-section {
+  padding: 40px 20px;
+}
+.sports-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  text-align: center;
+}
+.sports-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.sports-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+.sports-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Healthcare Section */
+.healthcare-section {
+  padding: 60px 20px;
+}
+.healthcare-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-align: center;
+}
+.healthcare-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+.healthcare-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.healthcare-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+.healthcare-text ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-flex,
+  .sports-container,
+  .healthcare-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-row img {
+    flex: 1 1 100%;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.section .text {
+    flex: 1;
+    padding: 20px;
+}
+
+.section .text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.section .text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.section .image {
+    flex: 1;
+    padding: 20px;
+}
+
+.section .image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Alternate background for second section */
+.hostel-life {
+    background: #eef7ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section .image, .section .text {
+        padding: 10px;
+    }
+}
+
+.infra-section {
+    text-align: left;
+    margin: 150px; /* top & bottom space around the section */
+    padding: 20px; /* inner spacing */
+    max-width: 800px; /* keeps it neat on large screens */
+    background-color: #f9f9f9; /* optional: subtle background */
+    border-radius: 8px; /* optional: smooth corners */
+}
+
+
+.infra-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px; /* extra gap below heading */
+}
+
+.infra-subtitle {
+    color: #e91e63; /* Pink */
+    font-size: 18px;
+    margin-bottom: 10px; /* small gap after subtitle */
+}
+
+.infra-contact {
+    font-size: 16px;
+    margin-bottom: 18px; /* spacing after contact line */
+}
+
+.infra-contact i {
+    color: #e91e63;
+    margin-right: 6px;
+}
+
+.infra-contact a {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.infra-btn {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 15px; /* gap above button */
+    display: inline-block;
+}
+
+.infra-btn:hover {
+    background-color: #d81b60;
+}
+
+
+
+.library-section {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.library-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.card {
+    width: 250px; /* fixed size for all cards */
+    padding: 18px;
+    border-radius: 6px;
+    color: #000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    text-align: center;
+    background-color: #fff; /* default */
+}
+
+.card h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+    padding-bottom: 6px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 15px;
+}
+
+/* Colors */
+.books {
+    background-color: #dfe4fd;
+}
+
+.ebooks {
+    background-color: #fde0e0;
+}
+
+.journals {
+    background-color: #d5f2df;
+}
+
+.newspapers {
+    background-color: #fff6d5;
+}
+
+
+.events-section {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.events-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.events-carousel {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-track img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+.slide span {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Gradient backgrounds for each slide */
+.library { background: linear-gradient(to right, #a8edea, #fed6e3); }
+.transport { background: linear-gradient(to right, #f7971e, #ffd200); }
+.hostel { background: linear-gradient(to right, #ffecd2, #fcb69f); }
+.bank { background: linear-gradient(to right, #cfd9df, #e2ebf0); }
+.health { background: linear-gradient(to right, #d4fc79, #96e6a1); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header"></div>
+
+  <main class="page-wrap">
+    <!-- <h1 class="page-title">Infrastructure</h1> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPCET Infrastructure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<div class="slideshow-container">
+    <div class="slide library">
+        Library
+        <span>St. Peter’s College of Engineering & Technology, Avadi, Chennai-54</span>
+    </div>
+    <div class="slide transport">
+        Transport
+        <span>St. Peter’s College of Engineering & Technology, Avadi, Chennai-54</span>
+    </div>
+    <div class="slide hostel">
+        Hostel
+        <span>St. Peter’s College of Engineering & Technology, Avadi, Chennai-54</span>
+    </div>
+    <div class="slide bank">
+        Bank
+        <span>St. Peter’s College of Engineering & Technology, Avadi, Chennai-54</span>
+    </div>
+    <div class="slide health">
+        Health Care
+        <span>St. Peter’s College of Engineering & Technology, Avadi, Chennai-54</span>
+    </div>
+
+    <div class="dots">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+
+    setTimeout(showSlides, 5000); // Change slide every 3 seconds
+}
+
+// Dot click navigation
+document.querySelectorAll('.dot').forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        slideIndex = index;
+        showSlides();
+    });
+});
+</script>
+
+
+
+
+<section class="library-section">
+  <h2>Engg.& Technology Library Statistics</h2>
+  <div class="library-stats">
+    <div class="card books">
+      <h3><i class="fas fa-book"></i> Books</h3>
+      <div class="stat"><span>Titles</span><span>1,656</span></div>
+      <div class="stat"><span>Volumes</span><span>3,753</span></div>
+    </div>
+
+    <!-- <div class="card ebooks">
+      <h3><i class="fas fa-tablet-alt"></i> E-Books</h3>
+      <div class="stat"><span>CD's</span><span>1,261</span></div>
+      <div class="stat"><span>DELNET E-Books</span><span>816</span></div>
+    </div> -->
+
+    <div class="card journals">
+      <h3><i class="fas fa-book-open"></i> Journals</h3>
+      <div class="stat"><span>Journals</span><span>10</span></div>
+      <div class="stat"><span>International Journals</span><span>54</span></div>
+    </div>
+
+    <div class="card newspapers">
+      <h3><i class="fas fa-newspaper"></i> Newspapers</h3>
+      <div class="stat"><span>Newspapers</span><span>3</span></div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Transport -->
+<section class="infra-section">
+  <h2 class="infra-heading">TRANSPORT</h2>
+  <p class="infra-subtitle">For Transport Assistance</p>
+  <p class="infra-contact">
+    <i class="fas fa-phone"></i>
+    Contact 
+    <a href="tel:+919710303124">+91 97103 03124</a>, 
+    <a href="tel:+919884211559">+91 98842 11559</a>
+  </p>
+  <!-- <button class="infra-btn">Route Map</button> -->
+   <!-- Route Map Button -->
+<a href="assets/BUSROUTE.pdf" target="_blank" class="infra-btn">Route Map</a>
+</section>
+
+<!-- Font Awesome for phone icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Hostel -->
+     <!-- Section 1: Hostel -->
+    <section class="section hostel">
+    <div class="text">
+        <h1>HOSTEL</h1>
+        <h2>About <span style="color:#e91e63;">Hostel</span></h2>
+        <p>
+            Our hostel is located in the city’s finest and trendiest district. Everyone who is interested in 
+            being a part of the creative and cutting-edge world that is Chennai, you are welcome to St. Peter’s 
+            hostel for the best experience.
+        </p>
+        <ul>
+            <li>Separate hostels are available for boys and girls with 164 and 156 rooms respectively with the total building area of 17,000 sq.m.</li>
+            <li>Rooms are available for single, double, triple and quadruple accommodation with attached bathrooms.</li>
+            <li>Kitchens are well equipped with modern steam cooking systems.</li>
+        </ul>
+    </div>
+    <div class="image">
+        <img src="assets/host1.png" alt="Hostel Image">
+    </div>
+</section>
+
+
+   <!-- Section 2: Hostel Life -->
+<section class="section hostel-life">
+    <div class="image">
+        <img src="assets/host_grp.png" alt="Hostel Life Image">
+    </div>
+    <div class="text">
+        <h2>Hostel Life</h2>
+        <p>
+            Hostel life is full of opportunities to meet new friends, participate in events, 
+            and create memories that will last a lifetime. We encourage community building and personal growth.
+        </p>
+        <ul>
+            <li>Clean and hygienic dining halls are maintained throughout.</li>
+            <li>Hostels are provided with reading rooms, TV rooms, and recreation halls.</li>
+            <li>A doctor visits the college/hostels daily to provide medical attention for students in need.</li>
+        </ul>
+    </div>
+</section>
+
+
+    <!-- Healthcare -->
+    <section class="healthcare-section">
+    <h2>HEALTHCARE SUPPORT SERVICES<br>St.Peter’s College</h2>
+    <div class="healthcare-content">
+        <div class="healthcare-image">
+        <img src="assets/hcare_sec1_img.png" alt="Healthcare Support Services">
+        </div>
+        <div class="healthcare-text">
+        <p>
+            A primary health center is operating for preliminary treatment to sick students in our campus. The Health center possesses enough drugs, beds and other medication facilities for needy persons. An ambulance is always ready at student’s service.
+        </p>
+        <ul>
+            <li>Medical Facilities available in the Campus.</li>
+            <li>Free Medicines are provided to sick students.</li>
+            <li>College ambulance is in availability for 24×7.</li>
+        </ul>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sports -->
+    <section class="sports-section">
+  <h2>STUDENT SPORTS FACILITIES</h2>
+  <div class="sports-container">
+    <div class="sports-image">
+      <img src="assets/img6.jpg" alt="Sports Facilities">
+    </div>
+    <div class="sports-text">
+      <p>
+        At St.Peter’s College of Engineering and Technology, we prioritize sports alongside academics to foster holistic development. Our expansive 30-acre Sports Village provides a dedicated space for athletic activities. Equipped with top-notch facilities, it serves as the training ground for our talented students.
+      </p>
+      <p>
+        We encourage participation in inter-university and intra-university tournaments, supporting our students with resources and guidance. Our college teams have consistently triumphed in major sporting events, including the renowned Anna University Inter Zonal Sports Championship among 575 engineering colleges.
+      </p>
+      <p>
+        Through sports, we promote values like sportsmanship, resilience, and teamwork, enhancing personal growth. At St.Peter’s College of Engineering and Technology, we strike a balance between academics and sports, recognizing their significance for success and well-being.
+      </p>
+      <p>
+        Join St.Peter’s College of Engineering and Technology Sports to unlock your potential, forge lasting friendships, and make your mark in the sports world!
+      </p>
+    </div>
+  </div>
+</section>
+
+
+   
+<!-- Events Section -->
+
+
+<section class="events-section">
+    <h2 class="events-heading">Events</h2>
+
+    <div class="events-carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-track">
+            <img src="assets/1.jpg" alt="Event 1">
+            <img src="assets/2.jpg" alt="Event 2">
+            <img src="assets/3.jpg" alt="Event 3">
+            <img src="assets/4.jpg" alt="Event 4">
+            <img src="assets/5.jpg" alt="Event 5">
+            <img src="assets/6.jpg" alt="Event 6">
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+</section>
+
+
+<script>
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+// Store all images in an array
+let images = Array.from(track.children);
+
+nextBtn.addEventListener('click', () => {
+    // Move first image to the end
+    const firstImg = track.firstElementChild;
+    track.appendChild(firstImg);
+});
+
+prevBtn.addEventListener('click', () => {
+    // Move last image to the beginning
+    const lastImg = track.lastElementChild;
+    track.insertBefore(lastImg, track.firstElementChild);
+});
+</script>
+
+
+    <!-- Banking -->
+    <section class="banking-facility">
+        <h2>On-Campus Banking Facility</h2>
+        <p>Indian Bank, St. Peter’s College</p>
+        <img src="assets/ind_bank.png" alt="Indian Bank on campus">
+        <p>A branch of Indian Bank is functioning in our campus with two ATMs . 
+          The students, faculty and staff make use of this facility for their financial transactions.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                // After header is loaded, attach the menu toggle event
+                const menu = document.querySelector('.menu');
+                const menuIcon = document.querySelector('.menu-icon');
+                if(menu && menuIcon) {
+                    menuIcon.addEventListener('click', () => {
+                        menu.classList.toggle('show');
+                    });
+                }
+            });
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+
+</body>
+</html>
+

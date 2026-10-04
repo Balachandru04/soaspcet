@@ -1,0 +1,507 @@
+<!-- Header placeholder -->
+    <div id="header"></div>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - School of Architecture</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    background: #0056a3;
+    color: white;
+    padding: 30px 15px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.page-header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* Admin Section */
+.admin-section {
+    padding: 40px 15px;
+}
+
+.admin-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+}
+
+.admin-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.admin-img {
+    flex: 1;
+}
+
+.admin-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-text {
+    flex: 1;
+}
+
+.admin-text h2 {
+    color: #0056a3;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.admin-text p {
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.admin-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFD400; /* Yellow background */
+  padding: 60px 80px;
+  position: relative;
+  gap: 30px;
+}
+
+.admin-hero-box {
+  border: 4px solid #E91E63; /* Pink border */
+  padding: 40px;
+  max-width: 50%;
+}
+
+.admin-hero-box h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.admin-hero-box p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.admin-hero-img {
+  position: relative;
+  max-width: 45%;
+}
+
+.admin-hero-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Decorative angled lines */
+.decor-line {
+  position: absolute;
+  width: 10px;
+  height: 120px;
+  background: #2E0854; /* Dark violet */
+  border-radius: 5px;
+}
+
+.line1 {
+  top: 30%;
+  left: -25px;
+  transform: rotate(45deg);
+  background: #2E0854;
+}
+
+.line2 {
+  top: 50%;
+  left: -45px;
+  transform: rotate(45deg);
+  background: #E91E63; /* Pink */
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN             */
+/* ============================= */
+
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+  .admin-hero {
+    padding: 40px 40px;
+  }
+
+  .admin-hero-box {
+    max-width: 55%;
+    padding: 30px;
+  }
+
+  .admin-hero-box h1 {
+    font-size: 2.2rem;
+  }
+
+  .admin-hero-box p {
+    font-size: 1rem;
+  }
+
+  .admin-hero-img {
+    max-width: 40%;
+  }
+}
+
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+    .admin-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admin-row.reverse {
+        flex-direction: column;
+    }
+
+    .admin-hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .admin-hero-box {
+      max-width: 100%;
+      padding: 20px;
+      border-width: 3px;
+    }
+
+    .admin-hero-box h1 {
+      font-size: 2rem;
+    }
+
+    .admin-hero-box p {
+      font-size: 1rem;
+    }
+
+    .admin-hero-img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    .decor-line {
+      display: none; /* Hide extra decorations on small screens */
+    }
+}
+
+/* Small Mobile (<=480px) */
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.8em;
+  }
+
+  .admin-text h2 {
+    font-size: 1.4em;
+  }
+
+  .admin-text p {
+    font-size: 0.95em;
+  }
+
+  .admin-hero-box h1 {
+    font-size: 1.6rem;
+  }
+
+  .admin-hero-box p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Trustees Section */
+.trustees-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.trustees-section h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.trustees-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.trustee-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trustee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.trustee-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #eee;
+}
+
+.trustee-card h3 {
+  margin: 5px 0 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.trustee-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+.trustees-message {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-left: 4px solid #0ea5e9; /* accent line */
+  padding: 20px 25px;
+  border-radius: 6px;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+
+.tamil-quote {
+    font-size: 36px;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Noto Sans Tamil", "Latha", sans-serif;
+}
+
+    </style>
+</head>
+<body>
+<!-- Administration Hero Section -->
+<section class="admin-hero">
+  <div class="admin-hero-box">
+    <h1>ADMINISTRATION</h1>
+    <p>
+      School of Architecture, St. Peter’s College of Engineering and Technology, Chennai
+    </p>
+  </div>
+  <div class="admin-hero-img">
+    <img src="assets/admini_banner.png" alt="College Building">
+    <!-- <span class="decor-line line1"></span>
+    <span class="decor-line line2"></span> -->
+  </div>
+</section>
+
+
+<!-- Overview -->
+<section class="admin-section">
+    <div class="admin-row">
+        <div class="admin-img">
+            <img src="assets/stud_collage.png" alt="School of Architecture Overview">
+        </div>
+        <div class="admin-text">
+            <h2>Overview</h2>
+            <p>
+            St.Peter’s College of Engineering and Technology, a co-educational institution was established by 
+            Lakshmi Saraswathi Educational Trust in the year 2008. The college aims to impart training to 
+            students to develop their Intellectual powers, identify and cultivate interest and talents, and train them 
+            to become responsible and eminent citizens of India. This institute provides various engineering disciplines, 
+            focusing on learning, industry engagement of students, innovative and inclusive pedagogy, and ethics.
+            While students at St.Peter’s engross themselves in academics, the college has a lot in store for them outside the classroom. 
+            Student life includes participation in sports, recreational & co-curricular activities and culturals.    
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Chairperson's Message -->
+<section class="admin-section">
+    <div class="admin-row reverse">
+        <div class="admin-img">
+            <img src="assets/chairperson_img.png" alt="Chairperson">
+        </div>
+        <div class="admin-text">
+            <h2>Chairperson’s Message</h2>
+            <p>
+                Architecture is more than designing spaces — it is about shaping communities and enriching human experiences.
+                At our School of Architecture, we aim to provide holistic education that not only develops technical skills
+                but also fosters cultural sensitivity, environmental responsibility, and innovative thinking.
+                I encourage every student to dream big, think creatively, and work passionately towards making a positive impact.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Trustees’ Message -->
+<section class="admin-section trustees-section">
+  <div class="admin-text">
+    <h2>Trustees’ Message</h2>
+  </div>
+
+  <!-- Trustees Grid -->
+  <div class="trustees-grid">
+    <!-- Trustee 1 -->
+    <div class="trustee-card">
+      <img src="assets/trustee_img.png" alt="Dr. T Namratha">
+      <h3>Dr. T Namratha</h3>
+      <p>Trustee</p>
+    </div>
+
+    <!-- Trustee 2 -->
+    <div class="trustee-card">
+      <img src="assets/trustee_1_img.png" alt="Dr. T Lasya">
+      <h3>Dr. T Lasya</h3>
+      <p>Trustee</p>
+    </div>
+  </div>
+
+  
+
+  
+  <!-- Message -->
+  <div class="trustees-message">
+    <p>
+      At St. Peter’s College of Engineering and Technology, we are committed to nurturing a culture of
+      academic excellence, innovation, and ethical leadership. Our focus is to provide students with
+      holistic learning experiences—uniting strong fundamentals with hands-on practice, industry
+      exposure, and values that shape responsible professionals. We invite every learner to explore,
+      experiment, and excel with confidence and character.
+    </p>
+    <p>
+        SPCET aims to raise today’s youth as entrepreneurs, distinguished scientists, great engineers and highly talented professionals. It has also been our aim to create an atmosphere of innovation, leadership and interpersonal skills. We consider it our moral responsibility to enable our students to face the challenges offered by the new world order. This campus provides with the support of competent faculty, a conducive ambience for visionary students to fulfill their dreams through honing their skills without leaving a single stone unturned
+    </p>
+    
+  </div>
+</section>
+<blockquote class="tamil-quote">
+                கேடில் விழுச்செல்வம் கல்வி யொருவற்கு <br>
+                மாடல்ல மற்றை யவை
+            </blockquote>
+            
+<!-- Secretary's Message -->
+<section class="admin-section">
+    <div class="admin-row">
+        <div class="admin-img">
+            <img src="assets/sec_img.jpg" alt="Secretary">
+        </div>
+        <div class="admin-text">
+            <h2>Secretary’s Message</h2>
+            <p>
+                The role of architecture in the modern world is constantly evolving.
+                Our institution ensures that students are exposed to both traditional design principles
+                and cutting-edge technological advancements. We emphasize hands-on learning, industry collaboration,
+                and interdisciplinary projects to prepare students for the dynamic challenges of the profession.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Director's Message -->
+<section class="admin-section">
+    <div class="admin-row reverse">
+        <div class="admin-img">
+            <img src="assets/hod.jpeg" alt="Director">
+        </div>
+        <div class="admin-text">
+            <h2>Director’s Message</h2>
+            <p>
+                Learning is a continuous process and does not end with the acquisition of a degree, especially because steady and rapid advances in architecture shorten the life of tools and techniques prevalent today. Therefore we do not aim to make our students walking manuals of any specific standards. Instead, they are given a strong foundation in architecture and design-solving techniques, and are made adaptable to changes. Our understanding is that persons who are clear and thorough about the fundamentals of architectural detailing can adapt to rapid changes in technology relatively easily. We want the education imparted to our students to be the basis of a life time of learning. I attribute this success to the winning combination of a dedicated faculty that works hard at imparting quality education, a well-planned syllabus and last but not least, our students. 
+We believe that this approach to teaching-learning, coupled with practical experience gained during Practical Training in reputed organizations, equips our students to handle the challenges posed by the  industry.
+
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<script>
+    // Load Header
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    // Load Footer
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
+
+
+    <!-- Footer placeholder -->
+    <div id="footer"></div>
+
+    <script>
+        // Load Header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                // After header is loaded, attach the menu toggle event
+                const menu = document.querySelector('.menu');
+                const menuIcon = document.querySelector('.menu-icon');
+                if(menu && menuIcon) {
+                    menuIcon.addEventListener('click', () => {
+                        menu.classList.toggle('show');
+                    });
+                }
+            });
+
+        // Load Footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+</html>

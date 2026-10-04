@@ -1,0 +1,207 @@
+<!-- footer.html -->
+<footer class="college-footer">
+    <div class="footer-container">
+        <!-- Left Section -->
+        <div class="footer-left">
+            <img src="assets/coa.jpg" alt="College Logo" class="college-logo">
+            <p class="college-name">School of Architecture, St. Peter’s College of Engineering and Technology, Chennai</p>
+
+            <h3 class="footer-heading">QUICK LINKS</h3>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Administration.html">Administration</a></li>
+                    <li><a href="Academics.html">Academics</a></li>
+                </ul>
+                <ul>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="Admission.html">Admission</a></li>
+                </ul>
+                <ul>
+                    <li><a href="Committee.html">Committee</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <h3 class="footer-heading">CONTACT US</h3>
+            <p>📍 School of Architecture, St. Peter’s College of Engineering and Technology, Chennai,</p> 
+                <p>Tamil Nadu, India, Pin Code - 600 054.</p>
+            <p>📧 Student Verification: <a href="mailto:examcell@spcet.ac.in">examcell@spcet.ac.in</a></p>
+            <p>📧 Office: <a href="mailto:spcet2008@gmail.com">spcet2008@gmail.com</a></p>
+            <p>📱 Admission: <a href="tel:7358110157">7358110157</a>, <a href="tel:7358110159">7358110159</a></p>
+            <p>☎ Office: <a href="tel:04426558092">044-26558092</a></p>
+
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href=""><img src="assets/twitter.svg" alt="Twitter"></a>
+                 <a href="https://www.instagram.com/soaspcet/?hl=en" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.instagram.com/soaspcet/?hl=en" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.svg" alt="Facebook"></a>
+                <a href="https://www." target="_blank" rel="noopener noreferrer"><img src="assets/linkedIn.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="footer-right">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.405548932153!2d80.118458!3d13.110666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526267d82f23ef%3A0xe1971dd1b2483c0c!2sSt.%20Peter%27s%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1691800000000!5m2!1sen!2sin"
+    width="100%"
+    height="75%"
+    style="border: 10px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+    </div>
+</footer>
+
+<!-- <link rel="stylesheet" href="footer.css"> -->
+
+<style>
+    /* Footer Base */
+.college-footer {
+    background-color: #FFD700; /* Same yellow as screenshot */
+    color: #000;
+    font-family: Arial, sans-serif;
+    padding: 40px 0; /* Top and bottom padding */
+}
+
+/* Footer container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Keeps content from stretching too wide */
+    margin: 0 auto;
+    padding: 0 30px; /* Internal space from screen edges */
+    box-sizing: border-box;
+}
+
+/* Left section */
+.footer-left {
+    flex: 1 1 55%;
+    min-width: 300px;
+}
+
+.college-logo {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.college-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    color: #FF1493; /* Pink heading color */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+/* Contact info */
+.footer-left p {
+    margin: 5px 0;
+}
+
+.footer-left a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.footer-left a:hover {
+    text-decoration: none;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+/* Right section (Map) */
+.footer-right {
+    flex: 1 1 40%;
+    min-width: 300px;
+    padding-left: 20px;
+}
+
+.footer-right iframe {
+    width: 100%;
+    height: 350px; /* Increased height */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 0 15px; /* Reduce padding for mobile */
+    }
+
+    .footer-left {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .footer-right {
+        flex: 1 1 100%; /* Full width on mobile */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap between links */
+    }
+
+    .college-name {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .footer-heading {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-links {
+        gap: 40px; /* Maintain larger gap for laptop */
+    }
+
+    .college-name {
+        font-size: 16px; /* Standard font size for laptop */
+    }
+
+    .footer-heading {
+        font-size: 16px; /* Standard font size for laptop */
+    }
+}
+
+</style>
